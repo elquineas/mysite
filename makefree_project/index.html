@@ -4,7 +4,7 @@
 	<title>MakeFree</title>
 	<!-- <link rel="icon" type="image/png" href="images/house.png"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+	
 	<style type="text/css">
 		@import url("main.css");
 
@@ -74,7 +74,7 @@
 				</span>
 			</span>
 			<span class="login_icon"> 
-				<a href="membership.html">회원가입</a>
+				<a href="constract1.html">회원가입</a>
 			</span>
 			<span class="login_icon"> 
 				<a href="#">고객센터</a>
@@ -87,24 +87,24 @@
 		<div class="side">
 			<div class="side_line" id="side_header">
 				<div class="side_btn">
-					<span class="header_icon"><i class="fas fa-home"></i></span>
-					<span class="header_menu">HOME</span>
+					<span class="header_icon home_btn"><i class="fas fa-home"></i></span>
+					<span class="header_menu home_btn">HOME</span>
 				</div>
-				<div class="side_btn">
-					<span class="header_icon"><i class="fas fa-exclamation"></i></span>
-					<span class="header_menu">NEW</span>
+				<div class="side_btn" id="new_btn">
+					<span class="header_icon new_btn"><i class="fas fa-exclamation"></i></span>
+					<span class="header_menu new_btn">NEW</span>
 				</div>
-				<div class="side_btn">
-					<span class="header_icon"><i class="fas fa-heart"></i></span>
-					<span class="header_menu">BEST</span>
+				<div class="side_btn" id="best_btn">
+					<span class="header_icon best_btn"><i class="fas fa-heart"></i></span>
+					<span class="header_menu best_btn">BEST</span>
 				</div>
 				
 			</div>
 			<div class="side_line" id="side_body">
 				<div>
 					<div class="side_btn2">
-						<span class="header_icon"><i class="fas fa-fish"></i></span>
-						<span class="header_menu">재료별 요리</span>
+						<span class="header_icon sub1"><i class="fas fa-fish"></i></span>
+						<span class="header_menu sub1">재료별 요리</span>
 					</div>
 				</div>
 				<div>
@@ -150,7 +150,7 @@
 			<div class="body_menu">
 				<div class="menu_wrap">
 					<div class="main_title">
-						소제목
+						새로운 레시피
 					</div>
 					<div class="main_menu">
 						<!-- <img src="images/치킨.jpg"> -->
@@ -193,7 +193,7 @@
 			<div class="body_menu">
 				<div class="menu_wrap">
 					<div class="main_title">
-						소제목
+						베스트 메뉴
 					</div>
 					<div class="main_menu">
 						<!-- <img src="images/치킨.jpg"> -->
@@ -233,37 +233,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="body_menu">
-				<div class="menu_wrap">
-					<div class="main_menu">
-						<img src="images/치킨.jpg">
-						치킨
-						<div class="menu_opacity1"></div>
-						<div class="menu_opacity2"></div>
-						<div class="menu_icon">
-							<i class="fas fa-search"></i>
-						</div>
-					</div>
-					<div class="main_menu">
-						<<img src="images/치킨.jpg">
-						치킨
-						<div class="menu_opacity1"></div>
-						<div class="menu_opacity2"></div>
-						<div class="menu_icon">
-							<i class="fas fa-search"></i>
-						</div>
-					</div>
-					<div class="main_menu">
-						<img src="images/치킨.jpg">
-						치킨
-						<div class="menu_opacity1"></div>
-						<div class="menu_opacity2"></div>
-						<div class="menu_icon">
-							<i class="fas fa-search"></i>
-						</div>
-					</div>
-				</div>
-			</div> -->
 		</div>
 
 	</div>
@@ -326,6 +295,19 @@
 
 				//확인작업
 				// alert(valId + ", " + valPw);
+			});
+
+			$('.home_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.new_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.best_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.sub1').click(function(event) {
+				location.href='index2.html';
 			});
 
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>캐러셀</title>
+	<style type="text/css">
+		div, ul, li {margin:0; padding:0;}
+		.c_wrap {
+			width: 200px; 
+			margin:0 auto;
+		}
+		.view {
+			width: 200px; 
+			height: 100px; 
+			border:3px dotted red;
+			overflow: hidden;
+		}
+		.slider {
+			list-style: none; 
+			width: 2500px; 
+			position: relative;
+		}
+		.slider li {
+			width: 200px; 
+			height: 100px; 
+			background: #787878; 
+			float: left; margin: 
+			1px;
+		}
+
+		.controller {list-style: none;}
+		.controller li {float: left; padding: 10px; cursor: pointer;}
+	</style>
+</head>
+<body>
+	
+	<div class="c_wrap">
+		<div class="view">
+			<ul class="slider">
+				<li>1</li>
+	            <li>2</li>
+	            <li>3</li>
+	            <li>4</li>
+	            <li>5</li>
+			</ul>
+		</div>
+		<ul class="controller">
+	        <li class="prevBtn">Prev</li>
+	        <li class="nextBtn">Next</li>
+	    </ul>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var item_width = $('.slider li').outerWidth(true);
+		//맨 마지막 item을 맨 앞으로 이동시켜 놓는다.
+		$('.slider li:first').before($('.slider li:last'));
+		//늘어난 만큰 -로 위치를 설정해 준다.
+		$('.slider').css('left',-item_width +'px');
+
+		$('.prevBtn').click(function(){
+		    var left_indent = parseInt($('.slider').css('left')) + item_width;
+		    $('.slider').animate({'left':left_indent+'px'},600, function(){
+		        $('.slider li:first').before($('.slider li:last'));
+		        $('.slider').css('left',-item_width+'px');
+		    });
+		});
+
+		//Next Button
+		$('.nextBtn').click(function(){
+		    var left_indent = parseInt($('.slider').css('left')) - item_width; //
+		    $('.slider').animate({'left':left_indent+'px'},300,function(){
+		        $('.slider li:last').after($('.slider li:first'));
+		        $('.slider').css('left',-item_width+'px');
+		    });
+		});
+	</script>
+
+</body>
+</html>

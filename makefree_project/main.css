@@ -98,10 +98,12 @@
 .body_wrap{
 	position: relative;
 	display: flex;
-	background-color: #fdfdfd;
+	background-color: #ededed;
 	/*border: 2px solid black;*/
 	margin-top: 60px; 
+	/*left: -300px;*/
 }
+
 .side{
 	position: fixed;
 	background-color: #fff;
@@ -136,6 +138,7 @@
 .header_menu{
 	flex: 3;
 }
+
 
 
 .side_btn2{
@@ -287,42 +290,46 @@
 	text-align: center;
 	/*border: 3px solid blue;*/
 	font-size: 50px;
+	padding-top: 100px;
 	width: 100vw;
-	height: 1200px;
+	height: 100%;
 	right: 0;
 	bottom: 0;
 	flex: 5;
 }
 .body_menu{
+
 	position: relative;
 	/*border: 1px solid green;*/
 	height: 400px;
-	margin-bottom: 100px;
+	/*margin-bottom: 50px;*/
 }
 .main_title{
 	position: absolute;
 	width: 500px;
 	height: 100px;
 	/*border: 1px solid black;*/
-	font-size: 35px;
+	font-size: 25px;
 	line-height: 100px;
 	top: 0;
-	left: -150px;
+	left: 20px;
 }
 
 .menu_wrap{
 	position: relative;
-	margin: 150px 250px 0px 150px;
-	padding: 100px 40px 40px 40px;
-	border: 1px solid orange;
+	margin: 0px 230px 0px 150px;
+	padding: 100px 80px 40px 170px;
+	/*border: 1px solid orange;*/
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
+	background: white;
 }
 .main_menu{
 	position: relative;
 	overflow: hidden;
-	font-size: 30px;
-	line-height: 35px;
+	font-size: 20px;
+	margin: 0 10px 0 10px;
+	line-height: 30px;
 	border: 1px solid black;
 	background-color: white;
 	width: 200px;
@@ -518,3 +525,54 @@
 	left: 30px;
 	display: none;
 }
+
+#banner{
+	position: relative;
+	margin: 150px 400px 0;
+	border-radius: 50%;
+	/*overflow: hidden;*/
+	width: 700px;
+	height: 700px;
+	opacity: .3;
+	z-index: 1;
+	/*border: 2px solid blue;*/
+	overflow: hidden;
+}
+
+#banner video{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	width: 1300px;
+	overflow: hidden;
+	z-index: -2;
+}
+.circle{
+	position: absolute;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	height: 700px;
+	border: 3px solid red;
+	overflow: hidden;
+}
+
+.go_main{
+	position: absolute;
+	left: 1150px;
+	top: 450px;
+	font-size: 30px;
+}
+.go_main:hover{
+	transition: .4s;
+	font-size: 40px;
+}
+
+.go_main > a{
+	text-decoration: none;
+	color: skyblue;
+}
+

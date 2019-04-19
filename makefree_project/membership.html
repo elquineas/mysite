@@ -159,7 +159,7 @@
 
 
 			$('.btn_back').click(function(event) {
-				location.href = 'index.html';
+				location.href = 'constract1.html';
 			});
 
 			var
@@ -236,8 +236,12 @@
 			$('#input_repw').keyup(function(event) {
 				var repw = $.trim(urepw.val());
 				var pw = $.trim(upw.val());
-
-				if (repw != pw){
+				if(repw == ''){
+					$('.err_msg').eq(2).css('display', 'inline-block')
+									   .css('color', '#ff1212')
+									   .text('*비밀번호를 다시 입력해주세요.');
+					$('.check_i').eq(2).css('color', '#dadada');
+				} else if (repw != pw){
 					$('.err_msg').eq(2).css('display', 'inline-block')
 									   .css('color', '#ff1212')
 									   .text('*입력하신 비밀번호가 다릅니다.');
@@ -294,58 +298,6 @@
 					$('.check_i').eq(4).css('color', 'mediumseagreen');
 				}
 			});
-
-			// $('#input_id').keyup(function(event) {
-			// 	var id = $.trim(uid.val());
-			// 	if (id == '') {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', '#ff1212')
-			// 						   .text('* 필수입력 정보입니다.');
-			// 		$('.check_i').eq(0).css('color', '#dadada');
-			// 		uid.select();
-			// 		uid.focus();
-			// 		return false;
-			// 	} else if (!idReg.test(id)) {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', '#ff1212')
-			// 						   .text('*올바른 아이디를 입력해주세요.');
-			// 		$('.check_i').eq(0).css('color', '#ff1212');
-			// 	} else {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', 'mediumseagreen')
-			// 						   .text('*사용가능한 아이디 입니다.');
-			// 		$('.check_i').eq(0).css('color', 'mediumseagreen');
-			// 	}
-			// });
-
-			// $('#input_id').keyup(function(event) {
-			// 	var id = $.trim(uid.val());
-			// 	if (id == '') {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', '#ff1212')
-			// 						   .text('* 필수입력 정보입니다.');
-			// 		$('.check_i').eq(0).css('color', '#dadada');
-			// 		uid.select();
-			// 		uid.focus();
-			// 		return false;
-			// 	} else if (!idReg.test(id)) {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', '#ff1212')
-			// 						   .text('*올바른 아이디를 입력해주세요.');
-			// 		$('.check_i').eq(0).css('color', '#ff1212');
-			// 	} else {
-			// 		$('.err_msg').eq(0).css('display', 'inline-block')
-			// 						   .css('color', 'mediumseagreen')
-			// 						   .text('*사용가능한 아이디 입니다.');
-			// 		$('.check_i').eq(0).css('color', 'mediumseagreen');
-			// 	}
-			// });
-
-
-
-
-
-
 		});
 	</script>
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>

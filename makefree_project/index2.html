@@ -1,336 +1,363 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>index.html</title>
-	
+	<title>MakeFree</title>
+	<!-- <link rel="icon" type="image/png" href="images/house.png"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
 	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
-		body{
-			font-family: 'Nanum Gothic Coding', monospace;
-			margin: 0px;
-			padding: 0px;
-			letter-spacing: -1px;
-		}
-		ul{
-			margin: 0px;
-			padding: 0px;
-			list-style-type: none; 
-		}
-		div{
-			margin: 0px;
-			padding: 0px;
-		}
-		a:link, a:visited{
-			color: inherit;
-		}
-		a{ text-decoration: none; padding: 0; }
-		.header_menu{
-			width: 100%;
-			background-color: #a5dff9;
-			height: 35px;
-		}
-		.inner_header_menu{
-		}
-		.header_sns{
-			float: left;
-			height: 35px;
-		}
-		.header_sns  i {
-			color: #30A9DE;
-			font-size: 2em;
-			padding: 0 1px;
-			line-height: 35px;
-			/*line-height는 길이를 똑같이 줘야 중앙으로 이동*/
-		}
-		.header_member{
-			float: right;
-		}
-		.header_member li{
-			float: left;
-			/*float은 보이는영역이 다름*/
-		}
-		.header_member ul > li> a{
-			color : darkgray;
-			text-decoration: none;
-			line-height: 35px;
-			font-size: 1.2em;
-			padding: 0 15px;
-			height: 32px;
-			display: inline-block;
-		}
-		.header_member ul > li:hover{
-/*			background-color:#30A9DE;
-			border-top: 3px solid #30A9DE;*/
-
-		}
-		.header_member ul > li:hover a{
-			color:white;
-			/*text-decoration: underline;*/
-		}
-		.inner_header{
-			max-width: 1440px;
-			margin: 0px auto;		
-		}
-		.inner_header2{
-			max-width: 1438px;
-			margin: 0px auto;	
-			border: 1px solid black;	
-		}
-		.header_logo{
-			opacity: ;
-			width: 100%;
-		}
-		.header_nav{
-			width: 100%;
-			background-color: white;
-			height: 50px;
-		}
-		.dropdown {
-			position: relative;
-			width: 100%;
-			/*overflow: hidden;*/
-		}
-
-		.dropdown > li{
-			margin-right: 5px;
-			line-height: 50px;
-			text-align: center;
-			width: 120px;
-			float: left;
-			box-sizing: border-box;
-			/*border: 1px solid black;*/
-			border-radius: 20px 20px 0 0;
-
-		}
-		.dropdown > li > a {
-			font-size: 1em;
-			text-decoration: none;	
-			color: gray;
-		}
-		.center1{
-			text-align: center;
-			margin: 0px auto;
-		}
-		.dropdown > li:hover{
-			cursor: pointer;
-			font-weight: 600;
-			border-bottom: 0;
-			box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.2),
-						3px 4px 20px 0px rgba(0,0,0,0.19);
-		}
-		.dropdown > li:hover .body{
-			background-color: green;
-		}
-		.dropdown > li:hover > a{
-			color:gray;
-		}
-		.dropdown2 {
-			position: absolute;
-			text-align: left;
-			display: none;
-			width: 100%;
-			margin: 0px;
-			padding: 0px;
-			background-color: #FFB85A;
-			left:0px;
-		}
-		.yel{background-color: #FEFAA1}
-		.gre{background-color: #E4F7BA}
-		.sky{background-color: skyblue}
-		.pur{background-color: #D9E5FF}
-		.red{background-color: #FFA7A7}
-
-		.dropdown2 > a{
-			color: #5D5D5D;
-			display: block;
-			text-decoration: none;
-			padding: 0 10px; 
-		}
-		.dropdown li:hover .dropdown2{
-			display: block;
-/* 			box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.2),
-			3px 4px 20px 0px rgba(0,0,0,0.19); */
-		}
-		.dropdown2 a:hover{
-			background-color: #EAEAEA; 
-			color: darkgray;
-		}
-		
-		.body{
-			margin-top: 200px; 
-			/*border: 1px solid black;*/
-			height: 380px;
-		}
-		.normal {
-			border-bottom: 0;
-		}
-		#allfood{
-			display: block;
-		}
-
-
-		#footer{
-			width: 100%;
-			padding: 20px 0; 
-		}
-		#footer *{
-			font-size: 10px;
-			line-height: normal;
-			list-style: none;
-			color: #333;
-		}
-		#footer > ul {
-			margin: 0 auto 10px;
-			text-align: center;
-		}
-		#footer > ul > li{
-			display: inline-block;
-			padding: 0 5px 0 7px;
-			border-left: 1px solid #dadada;
-		}
-		#footer > ul > li:first-child{
-			border-left: 0px;
-		}
-		#address{
-			position: relative;
-			margin: 0px auto;
-			text-align: center;
-		}
-		
-		footer{
-			position: absolute;
-			bottom: 0;
-			left:50%;
-			transform: translate(-50%, 0%);
-		}
-/*		first-child 첫번째
-		last-child 마지막번째
-		nth-child(n) n번째*/
-		
-		#footer > ul > li a:hover{
-			color:#1fbc02;
-			text-decoration: underline;
-		}
-		#addr_logo{
-			position: absolute;
-			bottom: 0;
-			width: 50px;
-			height: 15px;
-			line-height: 22px;
-			display: inline-block;
-		}
-
-
-#feee7d
-#ABF200
-#E4F7BA
-#D9E5FF
-#86F2DD
-#FEFAA1
-#62C4FE
-
+		@import url("main.css");
 
 	</style>
+
 </head>
 <body>
-	<header>
-		<div class="header_menu">
-			<div class="inner_header inner_header_menu">
-				<div class="header_sns">
-					<a href ="#"><i class="fab fa-instagram"></i></a>
-					<a href ="#"><i class="fab fa-twitter-square"></i></a>
-					<a href ="#"><i class="fab fa-facebook-square"></i></a>
-					<a href ="#"><i class="fab fa-google-plus-square"></i></a>
-					<a href ="#"><i class="fab fa-line"></i></a>
+	<div id="modal">
+		<div id="modal_login">
+			<span id="close_btn">
+				<i class="fas fa-times"></i>
+			</span>
+			<div class="login_logo">
+				<img src="images/logo2.png">
+			</div>
+			<div class="text_box">
+				<div class="input_box login_id">
+					<input type="text" placeholder="아 이 디" class="input_login" id="inputid">
+				</div>
+				<span class="err_code">아이디를 입력해주세요.</span>
+				<div class="input_box login_pw">
+					<input type="password" placeholder="패스워드" class="input_login" id="inputpw">
+				</div>
+				<span class="err_code">비밀번호를 입력해주세요.</span>
+			</div>
+			<div class="login_box">
+				로 그 인
+			</div>
+			<div class="modal_box">
+				<input type="checkbox" id="loginck">
+				<label for="loginck" class="label1">
+					&nbsp;로그인 상태 유지
+				</label>
+			</div>
+			<div class="member_box">
+				<a href="#">아이디 찾기</a>&nbsp;<span class="si">|</span>&nbsp;
+				<a href="#">비밀번호 찾기</a>&nbsp;<span class="si">|</span>&nbsp;
+				<a href="membership.html">회원가입</a>
+			</div>
+				
+		</div>	
+	</div>
+
+
+	<div class="header">
+		<div class="header_left">
+			<div class="logo">
+				<img src="images/logo2.png">
+			</div>
+		</div>
+
+		<div class="header_center">
+			<div class="search_wrap">
+				<input class="search_in" type="text" name="search_box" placeholder=" 검색">
+				<span class="search_icon">
+					<i class="fas fa-search"></i>
+				</span>
+			</div>
+			
+		</div>
+
+		<div class="header_right">
+			<span class="login_space"></span>
+			<span class="login_icon"> 
+				<span id="login_btn">
+					로 그 인
+				</span>
+			</span>
+			<span class="login_icon"> 
+				<a href="constract1.html">회원가입</a>
+			</span>
+			<span class="login_icon"> 
+				<a href="#">고객센터</a>
+			</span>
+		</div>
+	</div>
+
+<!-- 바디 -->
+	<div class="body_wrap">
+		<div class="side">
+			<div class="side_line" id="side_header">
+				<div class="side_btn">
+					<span class="header_icon home_btn"><i class="fas fa-home"></i></span>
+					<span class="header_menu home_btn">HOME</span>
+				</div>
+				<div class="side_btn" id="new_btn">
+					<span class="header_icon new_btn"><i class="fas fa-exclamation"></i></span>
+					<span class="header_menu new_btn">NEW</span>
+				</div>
+				<div class="side_btn" id="best_btn">
+					<span class="header_icon best_btn"><i class="fas fa-heart"></i></span>
+					<span class="header_menu best_btn">BEST</span>
+				</div>
+				
+			</div>
+			<div class="side_line" id="side_body">
+				<div>
+					<div class="side_btn2">
+						<span class="header_icon sub1"><i class="fas fa-fish"></i></span>
+						<span class="header_menu sub1">재료별 요리</span>
+					</div>
+				</div>
+				<div>
+					<div class="side_btn2">
+						<span class="header_icon"><i class="fas fa-utensils"></i></span>
+						<span class="header_menu">조리별 요리</span>
+					</div>
+				</div>
+				<div>
+					<div class="side_btn2">
+						<span class="header_icon"><i class="fas fa-handshake"></i></span>
+						<span class="header_menu">상황별 요리</span>
+					</div>
+				</div>
+				<div>
+					<div class="side_btn2">
+						<span class="header_icon"><i class="fas fa-flag"></i></span>
+						<span class="header_menu">나라별 요리</span>
+					</div>
 				</div>
 
-				<div class="header_member">
-					<ul>
-						<li><a href="login.html">로그인</a></li>
-						<li><a href="#">회원가입</a></li>
-						<li><a href="#">고객센터</a></li>
-					</ul>
+
+			</div>
+			<div class="side_line" id="side_footer">
+				<div class="sns" >
+					<a href ="#" class="btn insta">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href ="https://www.facebook.com/" class="btn facebook">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+					<a href ="https://www.youtube.com/" class="btn youtube">
+						<i class="fab fa-youtube"></i>
+					</a>
+					<a href ="#" class="btn line">
+						<i class="fab fa-line"></i>
+					</a>
 				</div>
 			</div>
 		</div>
-		<div class="header_logo">
-			<div class="inner_header center1">
-				<img src="images/logo2-2.png" alr="로고이미지">
-			</div>
-		</div>
-		<div class="header_nav">
-			<div class="inner_header">
-				<ul class="dropdown">
-					<li class="pur" id="normal"><a href="#">전체 요리</a>
-						<div class="dropdown2 pur" id="allfood">
-							<a href="#">재료별</a>
-							<a href="#">나라별</a>
-							<a href="#">조리법별</a>
-							<a href="#">상황별</a>
-						</div>
-					</li>
-					<li class="yel"><a href="#">재료별 요리</a>
-						<div class="dropdown2 yel">
-							<a href="#">닭고기</a>
-							<a href="#">돼지고기</a>
-							<a href="#">소고기</a>
-							<a href="#">야채</a>
-						</div>
-					</li>
-					<li class="sky"><a href="#">나라별 요리</a>
-						<div class="dropdown2 sky">
-							<a href="#">한식</a>
-							<a href="#">중식</a>
-							<a href="#">일식</a>
-							<a href="#">양식</a>
-						</div>
-					</li>
-					<li class="red"><a href="#">조리법별 요리</a>
-						<div class="dropdown2 red">
-							<a href="#">볶음/튀김</a>
-							<a href="#">찜/조림</a>
-							<a href="#">국요리</a>
-							<a href="#">양념/소스</a>
-						</div>
-					</li>
-					<li class="gre"><a href="#">상황별 요리</a>
-						<div class="dropdown2 gre">
-							<a href="#">간식/야식</a>
-							<a href="#">해장요리</a>
-							<a href="#">술안주</a>
-							<a href="#">손님접대요리</a>
-						</div>
-					</li>
-				</ul>				
-			</div>
-		</div>
-		<div class="body inner_header2"></div>
 
-		<footer>
-			<div id="footer">
-				<ul>
-					<li><a href="#">이용약관</a></li>
-					<li><strong><a href="#">개인정보처리방침</a></strong></li>
-					<li><a href="#">책임의 한계와 법적고지</a></li>
-					<li><a href="#">회원정보 고객센터</a></li>
-				</ul>
-
-				<div id="address">
-					<span>
-						<a href="#">
-							<img src="images/logo2.png" id="addr_logo">
-						</a>
-					</span>
-					<span>Copyright</span>
-					<span>ⓒ</span>
-					<span><strong><a href="#">MAKEFREE Corp.</a></strong></span>
-					<span>All Rights Reserved.</span>
+		<div class="body">
+			<div class="body_menu">
+				<div class="menu_wrap">
+					<div class="main_title">
+						닭고기
+					</div>
+					<div class="main_menu">
+						<img src="images/치킨.jpg">
+						치킨
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/닭고기2.jpg">
+						닭고기볶음
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/닭고기3.jpg">
+						불닭
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/닭고기4.jpg">
+						닭갈비
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
 				</div>
 			</div>
-		</footer>
+			<div class="body_menu">
+				<div class="menu_wrap">
+					<div class="main_title">
+						돼지고기
+					</div>
+					<div class="main_menu">
+						<img src="images/돼지1.jpg">
+						스테이크
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/돼지2.jpg">
+						돼지고기 볶음
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/돼지3.jpg">
+						수육
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/돼지4.jpg">
+						동파육
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body_menu">
+				<div class="menu_wrap">
+					<div class="main_title">
+						소고기
+					</div>
+					<div class="main_menu">
+						<img src="images/소고기1.jpg">
+						불고기
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/소고기2.jpg">
+						소고기 감자조림
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/소고기3.jpg">
+						소고기 동파육
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+					<div class="main_menu">
+						<img src="images/소고기4.jpg">
+						규카츠
+						<div class="menu_opacity1"></div>
+						<div class="menu_opacity2"></div>
+						<div class="menu_icon">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
-	</header>
+		</div>
+
+	</div>
+	
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+
+			$('.search_in').focus(function(event) {
+				$('.search_in').css('border', '1px solid blue');
+			});
+			$('.search_in').blur(function(event) {
+				$('.search_in').css('border', '1px solid gray');
+			});
+
+			$('.side_btn').click(function(event) {
+				location.href='#';
+			});
+
+			$('#login_btn').click(function(event) {
+				$('#modal').css('display', 'flex');
+				$('#inputid').focus();
+			});
+			$('#close_btn').click(function(event) {
+				$('#modal').css('display', 'none');
+			});
+			
+			$('.input_login').focus(function(event) {
+				$(this).parent().css('border', '1px solid skyblue');
+
+			});
+			$('.input_login').blur(function(event) {
+				$(this).parent().css('border', '1px solid #dadada');
+			});
+
+
+			$('.login_box').click(function(event) {
+				var valId = $('#inputid').val();
+				var valPw = $('#inputpw').val();
+
+				if (valId == '') {
+					$('.err_code').first().css('display','block');
+					$('#inputid').focus();
+					$('.err_code').last().css('display','none');
+					return;
+				} else {
+					$('.err_code').first().css('display','none');
+				}
+
+				if (valPw == '') {
+					$('.err_code').last().css('display','block');
+					$('#inputpw').focus();
+					return;
+				} else{
+					$('.err_code').last().css('display','none');
+				}
+
+				//확인작업
+				// alert(valId + ", " + valPw);
+			});
+
+			$('.home_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.new_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.best_btn').click(function(event) {
+				location.href='index.html';
+			});
+			$('.sub1').click(function(event) {
+				location.href='index2.html';
+			});
+
+
+		});
+	</script>
+
 </body>
 </html>
